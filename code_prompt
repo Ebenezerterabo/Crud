@@ -1,0 +1,47 @@
+Create an outline to help me grasp the above concept as a beginner. I will use this outline to generate notes for all your output using markdown.
+
+When I give you a topic from the outline give me short and summarized notes using the 80/20 rule (Pareto Principle) that i can use to study, and use a term-definition style. Include code blocks to explain the concept and give me the outputs add examples to it if necessary
+
+Let's start with the first topic in the table of contents. kindly explain only the first topic so that I can use the next to prompt you to move to the next topic until we consume all the topics
+
+
+SOLVING INTENDED TASK
+Question 1:
+As a senior developer with experience in answering interview questions and teaching, I'm solving this task but don't understand it. Help me with a clear understanding of the task like explaining it to a 10years old boy
+NB: I want to use the best practices of just-in-time learning (focus on the concept needed to solve this task)
+
+As a senior developer with experience in answering interview questions and teaching, I'm solving this task but don't understand it. Help me with a clear understanding of the task like explaining it to a 10years boy and approaching the task methodically with a step-by-step walk-through
+
+Question 2:
+Kindly use a checklist to outline the step-by-step procedure I will write my logic to achieve this result. you can equally add markdowns where needed
+
+You are a senior developer with experience in technical interviews (programmers). Explain to an interviewee how to solve a task with the following concepts:
+Give me a step-by-step walkthrough of the process I have to follow in other to solve the task, use markdown and a checklist
+
+Explain to me like a 5years old boy using the 80/20 mode of learning where I will learn the most important things in the concept(20) and the practicing(80)
+
+I am trying to solve this task above but I don't know how to go about it, act as a teacher with years of experience in JavaScript programming specifically nodejs to take me through the needed hints and steps to solve the task. Note prioritize the thought process and the approach to solve the task
+
+
+
+Tech stack
+frontend - react.js, next.js, daisy ui/tailwind
+backend - express.js, Hasura, superbase(PostgreSQL), 
+
+
+Time management
+Increase productivity
+Focus on good habit
+
+Blacksword
+
+
+
+Volunteering organization 
+https://www.idealist.org/en
+
+
+
+I want you to act as a front-end developer who is proficient in HTML, CSS, and Javascript. I am a beginner developer and I building a form using HTML, styling it with CSS, and making it interactive with Javascript but I have the basis of the above language listed I want you to serve as a guide to help me create a signing-in and sign up form. I am trying to use project base learning together with the 80/20 rule and I want it to serve as a way of learning as well so kindly give me hint and don't explicitly give me the code make me curios so that I will ask questions that will make me learn.
+
+Note: I will ask you a question and base on that you will help me figure it out as a way of learning
