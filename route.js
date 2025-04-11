@@ -1,5 +1,6 @@
 import { User } from "./models.js";
 import express from "express";
+import mongoose from "mongoose";
 
 const router = express.Router();
 
@@ -24,35 +25,58 @@ router.get("/users", async (req, res) => {
 
 // Get a specific user
 router.get("/users/:id", async (req, res) => {
+    
+    const {id} = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).send("User not found");
+    }
+
     try {
-        const user = await User.findById(req.params.id);
+        const user = await User.findById(id);
         res.send(user);
     } catch (error) {
-        res.status(404).send("User not found");
+        res.status(500).send("Internal server error");
     }
 });
 
 // Update a specific user
 router.put("/users/:id", async (req, res) => {
-    try {
-        const user = await User.findById(req.params.id);
-        user.name = req.body.name;
-        user.email = req.body.email;
-        user.password = req.body.password;
-        user.isAdmin = req.body.isAdmin;
-        await user.save();
-        res.send(user);
-    } catch (error) {
-        res.status(404).send("User not found");
+    
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).send("Invalid ID");
     }
+
+    const user = await User.findById(id);
+    if (!user) {
+        return res.status(404).send("User not found");
+    }
+    user.name = req.body.name ?? user.name;
+    user.email = req.body.email ?? user.email;
+    user.password = req.body.password ?? user.password;
+    user.isAdmin = req.body.isAdmin ?? user.isAdmin;
+    await user.save();
+    res.send(user);
+    
+    
+    // try {
+    //     const user = await User.findById(id);
+    //     user.name = req.body.name ?? user.name;
+    //     user.email = req.body.email ?? user.email;
+    //     user.password = req.body.password ?? user.password;
+    //     user.isAdmin = req.body.isAdmin;
+    //     await user.save();
+    // } catch (error) {
+    //     res.status(500).send("Internal server error");
+    // }
 });
 
 // Delete a user
 router.delete("/users/:id", async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
-        user.deleteOne()
-        res.send("Deleted succefully")
+        await user.deleteOne()
+        res.send("deleted successfully");
 
     } catch {
         res.status(400).send("Deletion unsuccessful")
